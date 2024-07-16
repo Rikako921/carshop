@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+/* ヘッダートップ青色部分 */
+
+.nav1 {
+  background-color: #0b327f;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px
+}
+.top-left, .top-right {
+  display: flex;
+  list-style: none;
+  font-size: 13px;
+  padding: 0;
+  margin: 0; /* マージンを0に設定 */
+  align-items: center; /* リスト内の項目を上下中央に配置 */
+}
+
+.top-left li, .top-right li {
+  margin: 0 10px; /* 各項目の間隔を設定 */
+}
+
+.headertop-link{
+  color: #e8e3e3; /* リンクの色を白に設定 */
+  text-decoration: none; /* 下線を削除 */
+}
+.login {
+  color: #7c7a7a; /* リンクの色を茶に設定 */
+  text-decoration: none;
+}
+.headertop-link:hover, .login:hover {
+  text-decoration: underline; /* ホバー時に下線を表示 */
+}
+
+  .search-bar-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+}
+
+
+
+.carshop-icon {
+  width: 3vw;
+}
+
+.carshop-title{
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  font-style: normal; 
+}
+
+.search-form {
+  width: 65vw;
+  height: 5vh;
+  display: flex;
+  margin: 5px;
+}
+
+.search-form>.input-box {
+  width: 100%;
+  height: 5vh;
+}
+
+.search-button {
+  width: 5vh;
+  border: 0;
+  cursor: pointer;
+  background-color: #0b327f;
+}
+
+.search-icon {
+  width: 100%;
+}
+
+/* devise導入後 */
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+
+
+.logout {
+  text-decoration: none;
+  color: #333333;
+}
+
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #333333;
+}
+
+.carshop-title{
+  color: #0b327f;
+  font-size: 20px;
+  text-decoration: none;
+
+}
+.site-title {
+  list-style: none;
+  padding: 0;
+  margin-right: 150px;
+  text-align: center;
+  width: 150px;
+}
+
+
+

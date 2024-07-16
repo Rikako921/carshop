@@ -21,14 +21,18 @@
 
 <%# 商品一覧 %>
 <div class='item-contents'>
-    <div class='lists-left'>
-      <%= link_to '最新の車を見る', "#", class: "new-list" %></li>
-      <%= link_to 'メーカーで探す', "#", class: "brand-list" %></li>
-    </div>
+      <div class='lists-left'>
+        <nav class="nav-links">
+        <%= link_to '最新の車を見る', "#", class: "nav-link new-list" %>
+        <%= link_to 'メーカー', "#", class: "nav-link brand-list" %>
+        <%= link_to 'お問い合わせ', "#", class: "nav-link contact-list" %>
+        </nav>
+      </div>
+
   <div class='title'>販売車両一覧</div>
   <div class="subtitle">
       <%= image_tag 'carshop-blueline.png' , size: '6x15' ,class: "blueline-image" %>
-    新規投稿商品
+    新規入庫車
   </div>
   <ul class='item-lists'>
    <%# <% items = @items.first(4) %>  
@@ -45,10 +49,10 @@
           </div>
           <div class='item-info'>
             <h3 class='car-name'>
-              <%= "car_name "%>
+              <%= "ハリアー"%>
             </h3>
             <div class='item-price'>
-              <span><%= "car_price" %>円<br><%= 'grade' %></span>
+              <span><%= "250" %>万円<br><%= 'Z letherタイプ' %></span>
               <div class='star-btn'>
                 <%= image_tag "star.png", class:"star-icon" %>
               </div>

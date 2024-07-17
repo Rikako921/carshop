@@ -36,10 +36,7 @@
   color: #e8e3e3; /* リンクの色を白に設定 */
   text-decoration: none; /* 下線を削除 */
 }
-.login {
-  color: #7c7a7a; /* リンクの色を茶に設定 */
-  text-decoration: none;
-}
+
 .headertop-link:hover, .login:hover {
   text-decoration: underline; /* ホバー時に下線を表示 */
 }
@@ -105,7 +102,7 @@
   text-decoration: none;
   line-height: 32px;
   margin-right: 3vw;
-  color: #333333;
+  color: #e2dede;
 }
 
 .sign-up {

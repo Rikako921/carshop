@@ -185,21 +185,137 @@ a {
 /* 追加部分 */
 .more-button {
   text-align: center;
-  margin-top: 20px;
+  margin: 3px 0;
 }
 
 .more-link {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #0b327f;
-  color: white;
+  padding: 10px 10px;
+  color: rgb(10, 73, 167);
   text-decoration: none;
   border-radius: 5px;
-  transition: background-color 0.3s;
 }
 
-.more-link:hover {
-  background-color: #094b9f;
-}
 /* //商品一覧 */
 
+
+/* Swiperコンテナのスタイル */
+.swiper-container {
+  width: 80%;
+  max-width: 800px;
+  height: 400px; /* 高さを少し増やす */
+  margin: 0 auto;
+  position: relative;
+}
+
+/* スライド全体のスタイル */
+.swiper-slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* スライド画像のスタイル */
+.slide-image {
+  width: 100%;
+  height: 80%; /* 画像の高さを調整 */
+  object-fit: contain;
+}
+
+/* スライドコンテンツ（タイトルと価格）のスタイル */
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #f9f9f9;
+  color: rgb(59, 103, 19);
+  padding: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.slide-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.slide-price {
+  margin: 5px 0 0;
+  font-size: 16px;
+}
+
+/* ナビゲーションボタン（矢印）のスタイル */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px;
+}
+
+/* ボタンの位置を調整 */
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+/* ページネーションのスタイル */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #007aff;
+}
+
+@media (max-width: 768px) {
+  .swiper-container {
+    width: 90%;
+    height: 350px;
+  }
+
+  .slide-title {
+    font-size: 16px;
+  }
+
+  .slide-price {
+    font-size: 14px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 14px;
+  }
+}

@@ -1,3 +1,4 @@
+index html.erb
 <%= render "shared/header" %>
 <div class='main'>
 
@@ -15,10 +16,6 @@
   </div>
   <%# /画面上部の「IMPROVE」帯部分  %>
 
-
-
- 
-
 <%# 商品一覧 %>
 <div class='item-contents'>
       <div class='lists-left'>
@@ -34,45 +31,32 @@
       <%= image_tag 'carshop-blueline.png' , size: '6x15' ,class: "blueline-image" %>
     新規入庫車
   </div>
-  <ul class='item-lists'>
-   <%# <% items = @items.first(4) %>  
-    <%# <% items.each do |item| %> 
-      <li class='list'>
-        <%= link_to "#" do %>
-          <div class='item-img-content'>
-            <%= image_tag "carshop-harrier.jpg", class: "item-img" %>
-            <%# 商品が売れていればsold outを表示しましょう %>
-            <div class='sold-out'>
-              <span>成約</span>
-            </div>
-            <%# //商品が売れていればsold outを表示しましょう %>
-          </div>
-          <div class='item-info'>
-            <h3 class='car-name'>
-              <%= "ハリアー"%>
-            </h3>
-            <div class='item-price'>
-              <span><%= "250" %>万円<br><%= 'Z letherタイプ' %></span>
-              <div class='star-btn'>
-                <%= image_tag "star.png", class:"star-icon" %>
-              </div>
-            </div>
-          </div>
-         <% end %> 
-      </li>
-    <%# <% end %> 
-  </ul>
-  <%# <% if @items.size > 4 %> 
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <% @post.each do |post| %>
+      <div class="swiper-slide">
+        <%# <%= image_tag post.image, class: "slide-image" if post.image.attached? %> 
+        <div class="slide-content">
+          <h3 class="slide-title"><%= post.car_name %></h3>
+          <p class="slide-price">¥<%= post.price_total %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
     <div class='more-button'>
       <%= link_to 'もっと見る', root_path, class: 'more-link' %>
     </div>
-  <%# <% end %> 
-</div>
 <%# /商品一覧 %>
-</div>
 
 <%= link_to('#', class: 'purchase-btn') do %>
   <span class='purchase-btn-text'>出品する</span>
   <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
 <% end %>
 <%= render "shared/footer" %>
+
+<div id="slideshow">   </div>

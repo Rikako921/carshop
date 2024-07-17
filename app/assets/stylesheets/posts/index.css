@@ -1,0 +1,321 @@
+a {
+  text-decoration: none;
+}
+
+.main {
+  background: #f8f8f8;
+}
+
+/* 画面上部の「IMPROVE」帯部分 */
+.title-contents {
+  width: 100vw;
+  height: 50vh;
+  background-image: url('carshop-road.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 25vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  text-align: right;
+}
+
+.service-title {
+  font-size: 6vh;
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.service-explain {
+  font-size: 2.5vh;
+  line-height: 40px;
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* //画面上部の「IMPROVE」帯部分 */
+
+/* 商品一覧 */
+
+.item-contents {
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 5vw;
+  font-family: 'Arial', sans-serif;
+}
+
+.lists-left {
+  width: 100%;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link {
+  color: #0b0a0a;
+  text-decoration: none;
+  margin: 0 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #5a45b5;  /* テキストの色を変更 */
+  transform: translateY(-2px);  /* 少し上に移動 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 5vh;
+  line-height: 1.5;
+  font-weight: bold;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 3vh;
+  margin: 1vh 0;
+  color: #666;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.subtitle>.blueline-image {
+  margin-right: 10px;
+}
+
+.item-lists {
+  list-style: none;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.item-lists>.list {
+  width: 22%;
+  margin: 1vh 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.item-lists>.list:hover {
+  transform: translateY(-5px);
+}
+
+.item-img-content {
+  position: relative;
+}
+
+.item-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sold-out {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) skewY(-10deg);
+  color: #c20000;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 8px 16px;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+}
+
+.car-name {
+  font-size: 19px;
+  margin: 8px 0;
+  color: #333;
+}
+
+.item-price {
+  font-size: 16px;
+  margin-top: 8px;
+  color: #666;
+  text-align: start;
+  width: 100%;
+}
+
+.star-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.star-icon {
+  height: 19px;
+  width: 19px;
+  margin-right: 5px;
+}
+
+/* 追加部分 */
+.more-button {
+  text-align: center;
+  margin: 3px 0;
+}
+
+.more-link {
+  display: inline-block;
+  padding: 10px 10px;
+  color: rgb(10, 73, 167);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* //商品一覧 */
+
+
+/* Swiperコンテナのスタイル */
+.swiper-container {
+  width: 80%;
+  max-width: 800px;
+  height: 400px; /* 高さを少し増やす */
+  margin: 0 auto;
+  position: relative;
+}
+
+/* スライド全体のスタイル */
+.swiper-slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* スライド画像のスタイル */
+.slide-image {
+  width: 100%;
+  height: 80%; /* 画像の高さを調整 */
+  object-fit: contain;
+}
+
+/* スライドコンテンツ（タイトルと価格）のスタイル */
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #f9f9f9;
+  color: rgb(59, 103, 19);
+  padding: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.slide-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.slide-price {
+  margin: 5px 0 0;
+  font-size: 16px;
+}
+
+/* ナビゲーションボタン（矢印）のスタイル */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px;
+}
+
+/* ボタンの位置を調整 */
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+/* ページネーションのスタイル */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #007aff;
+}
+
+@media (max-width: 768px) {
+  .swiper-container {
+    width: 90%;
+    height: 350px;
+  }
+
+  .slide-title {
+    font-size: 16px;
+  }
+
+  .slide-price {
+    font-size: 14px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 14px;
+  }
+}

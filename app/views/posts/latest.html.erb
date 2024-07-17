@@ -1,0 +1,15 @@
+<%= render "shared/header" %>
+<h1>最新の車一覧</h1>
+
+<div class="latest-lists">
+  <% @post.each do |post| %>
+    <div class="car-item">
+      <h2><%= post.car_name %></h2>
+      <p><%= post.car_model %></p>
+      <p>価格: <%= post.price_total %>円</p>
+      <%# <%= image_tag post.image_url if post.image_url.present? %>
+    </div>
+  <% end %>
+</div>
+
+<%= render "shared/footer" %>

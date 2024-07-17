@@ -1,0 +1,63 @@
+
+<%= render "shared/header" %>
+<div class='main'>
+
+  <%# 画面上部の「IMPROVE」帯部分 %>
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      販売・買取も対応
+    </h2>
+    <p class='service-explain'>
+      出張査定、出張納車も対応中
+    </p>
+    <p class='service-explain'>
+      気軽にお電話　☎000-000-0000 お待ちしております
+    </p>
+  </div>
+  <%# /画面上部の「IMPROVE」帯部分  %>
+
+<%# 商品一覧 %>
+<div class='item-contents'>
+      <div class='lists-left'>
+        <nav class="nav-links">
+        <%= link_to '最新の車を見る', latest_path, class: "nav-link new-list" %>
+        <%= link_to 'メーカー', "#", class: "nav-link brand-list" %>
+        <%= link_to 'お問い合わせ', "#", class: "nav-link contact-list" %>
+        </nav>
+      </div>
+
+  <div class='title'>販売車両一覧</div>
+  <div class="subtitle">
+      <%= image_tag 'carshop-blueline.png' , size: '6x15' ,class: "blueline-image" %>
+    新規入庫車
+  </div>
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <% @post.each do |post| %>
+      <div class="swiper-slide">
+        <%# <%= image_tag post.image, class: "slide-image" if post.image.attached? %> 
+        <div class="slide-content">
+          <h3 class="slide-title"><%= post.car_name %></h3>
+          <p class="slide-price">¥<%= post.price_total %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+    <div class='more-button'>
+      <%= link_to 'もっと見る', root_path, class: 'more-link' %>
+    </div>
+<%# /商品一覧 %>
+
+<%= link_to('#', class: 'purchase-btn') do %>
+  <span class='purchase-btn-text'>出品する</span>
+  <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+<% end %>
+<%= render "shared/footer" %>
+
+
+<div id="slideshow">   </div>

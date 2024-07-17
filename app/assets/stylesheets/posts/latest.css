@@ -1,0 +1,7 @@
+.latest-lists{
+  display: flex;
+  background-color: aquamarine;
+}
+.car-item{
+  margin: 5%;
+}

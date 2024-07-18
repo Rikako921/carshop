@@ -1,0 +1,17 @@
+<%= render "shared/header" %>
+
+<div class="latest-list">
+  <% @post.each do |post| %>
+    <div class="car-item">
+      <h2><%= post.car_name %></h2>
+      <p><%= post.grade %></p>
+      <p>価格: <%= post.price_total %>円</p>
+      <%# <%= image_tag post.image_url if post.image_url.present? %>
+    </div>
+  <% end %>
+</div>
+<div class="pagination">
+<%= paginate @post %>
+</div>
+
+<%= render "shared/footer" %>

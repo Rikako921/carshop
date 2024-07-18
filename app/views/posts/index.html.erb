@@ -1,4 +1,4 @@
-index html.erb
+
 <%= render "shared/header" %>
 <div class='main'>
 
@@ -20,7 +20,7 @@ index html.erb
 <div class='item-contents'>
       <div class='lists-left'>
         <nav class="nav-links">
-        <%= link_to '最新の車を見る', "#", class: "nav-link new-list" %>
+        <%= link_to '最新の車を見る', latest_path, class: "nav-link new-list" %>
         <%= link_to 'メーカー', "#", class: "nav-link brand-list" %>
         <%= link_to 'お問い合わせ', "#", class: "nav-link contact-list" %>
         </nav>
@@ -49,7 +49,7 @@ index html.erb
   <div class="swiper-button-next"></div>
 </div>
     <div class='more-button'>
-      <%= link_to 'もっと見る', root_path, class: 'more-link' %>
+      <%= link_to 'もっと見る', latest_path, class: 'more-link' %>
     </div>
 <%# /商品一覧 %>
 

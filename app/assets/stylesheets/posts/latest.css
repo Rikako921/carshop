@@ -1,0 +1,17 @@
+.latest-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}
+.car-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: calc(33.333% - 20px); /* 3列にするために幅を設定 */
+  box-sizing: border-box;
+  text-align: center;
+}
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}

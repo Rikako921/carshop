@@ -71,3 +71,5 @@ group :test do
   gem "webdrivers"
 end
 gem 'kaminari'
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'

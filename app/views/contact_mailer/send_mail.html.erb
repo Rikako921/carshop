@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>新しいお問い合わせがありました</h1>
+    <p>名前: <%= @contact.name %></p>
+    <p>メールアドレス: <%= @contact.email %></p>
+    <p>電話番号: <%= @contact.phone_number %></p>
+    <p>メッセージ:</p>
+    <pre><%= @contact.message %></pre>
+  </body>
+</html>

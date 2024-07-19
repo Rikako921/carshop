@@ -5,10 +5,10 @@ class ContactsController < ApplicationController
 
   def confirm
     @contact = Contact.new(contact_params)
-    if @contact.invalid?
-      flash[:alert] = @contact.errors.full_messages.join(", ")
-      @contact = Contact.new
-      render :new
+    if @contact.valid?
+      render template: 'contacts/confirm'
+    else
+      redirect_to new_contact_path, alert: @contact.errors.full_messages.join(", ")
     end
   end
 

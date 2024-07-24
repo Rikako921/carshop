@@ -1,22 +1,27 @@
-.purchase-btn {
-  width: 120px;
-  background: #3ccace;
-  text-align: center;
-  border-radius: 4%;
-  bottom: 32px;
-  right: 32px;
-  position: fixed;
-  padding: 15px;
-}
-
-.purchase-btn-text {
-  color: #fff;
-  display: block;
-  font-size: 18px;
+.exhibit-btn {
   text-decoration: none;
-  margin-bottom: 5px;
+  font-size: medium;
+  background-color: rgb(193, 60, 60);
+  color: aliceblue;
+  width: 200px;
+  text-align: center;
+  justify-content: center;
+  height: 40px; 
+  line-height: 40px;
+  border: 2px solid darkred; 
+  border-radius: 10px; 
+  display: inline-block;
+  transition: background-color 0.3s ease; 
+  margin-bottom:35px;
 }
 
-.purchase-btn-icon {
-  width: 60%;
+.exhibit-btn:hover {
+  background-color: darkred;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
 }

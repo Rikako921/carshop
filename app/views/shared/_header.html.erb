@@ -10,7 +10,7 @@
       <%# deviseを導入できたら、ログインの有無で表示が変わるように分岐%>
       <%# <li><%= link_to current_user.nickname, "#", class: "user-nickname" </li> %>
       <%# <li><%= link_to 'ログアウト', "#", data: {turbo_method: :delete}, class: "logout" </li> %>
-      <li><%= link_to '従業員の方はコチラ', "#", class: "login" %></li>
+      <li><%= link_to '従業員の方はコチラ', new_user_registration_path, class: "login" %></li>
       <%# //deviseを導入できたら、ログインの有無で表示が変わるように分岐%>
       </ul>
   </div>

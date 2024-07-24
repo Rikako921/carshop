@@ -53,9 +53,8 @@
     </div>
 <%# /商品一覧 %>
 
-<%= link_to('#', class: 'purchase-btn') do %>
-  <span class='purchase-btn-text'>出品する</span>
-  <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+<% if user_signed_in? %>
+<%= link_to '新入庫を追加する', "#", class: "exhibit-btn" %>
 <% end %>
 <%= render "shared/footer" %>
 

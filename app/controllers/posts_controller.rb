@@ -5,4 +5,13 @@ class PostsController < ApplicationController
   def latest
     @post = Post.all.order(created_at: :desc).page(params[:page]).per(4)
   end
+
+  def new
+    @post = Post.new
+  end
+
+  def create
+    
+  end
+
 end

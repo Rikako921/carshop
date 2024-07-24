@@ -10,7 +10,7 @@ class CreatePosts < ActiveRecord::Migration[7.0]
       t.string :car_model, null: false
       t.text :rec_point, null: false
       t.text :grade, null: false
-
+      t.references :user, null: false, foreign_key: true
       t.timestamps
     end
   end

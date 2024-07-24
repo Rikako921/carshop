@@ -1,0 +1,106 @@
+<%= render "shared/header"%>
+
+<%= form_with model: @post, url: posts_path, local: true do |f| %>
+
+<%= render 'shared/error_messages', model: f.object %>
+<div class="registration-main">
+<div class='form-wrap'>
+  
+  <div class='form-header'>
+    <h1 class='form-header-text'>
+      車の登録情報入力
+    </h1>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">写真</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.file_field :image, id:"item-image" %>
+  </div>
+  
+
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">メーカー</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :car_model, class:"input-default", id:"car_model", placeholder:"トヨタ・日産等", autofocus: true %>
+  </div>
+  
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">車種</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :car_name, class:"input-default", id:"car_name", placeholder:"ハリアー・アクア" %>
+  </div>
+  
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">グレード</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :grade, class:"input-default", id:"grade", placeholder:"" %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">総額</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.number_field :price_total, class:"input-default", id:"price_total", placeholder:"半角数字のみ例）100000" %>
+  </div>
+
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">色</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :color, class:"input-default", id:"color", placeholder:"" %>
+  </div>
+
+      <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">走行距離</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.number_field :distance, class:"input-default", id:"distance", placeholder:"例）100000" %>
+  </div>
+
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">年式</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.number_field :year, class:"input-default", id:"year", placeholder:"例）2014" %>
+  </div>
+
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">車検期限</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.number_field :inspection, class:"input-default", id:"inspection", placeholder:"例）24/10" %>
+  </div>
+
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">おすすめポイント</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :rec_point, class:"input-default", id:"rec_point", placeholder:"" %>
+  </div>
+
+  <div class='exhibit-btn-wrap'>
+    <%= f.submit "投稿する" ,class:"exhibit-btn" %>
+  </div>
+
+</div>
+
+</div>
+<% end %>
+
+<%= render "shared/footer"%>

@@ -36,7 +36,7 @@
   <div class="swiper-wrapper">
     <% @post.each do |post| %>
       <div class="swiper-slide">
-        <%# <%= image_tag post.image, class: "slide-image" if post.image.attached? %> 
+         <%= image_tag post.image,class: "slide-image" %> 
         <div class="slide-content">
           <h3 class="slide-title"><%= post.car_name %></h3>
           <p class="slide-price">¥<%= post.price_total %></p>
@@ -54,7 +54,7 @@
 <%# /商品一覧 %>
 
 <% if user_signed_in? %>
-<%= link_to '新入庫を追加する', "#", class: "exhibit-btn" %>
+<%= link_to '新入庫を追加する', new_post_path, class: "exhibit-btn" %>
 <% end %>
 <%= render "shared/footer" %>
 

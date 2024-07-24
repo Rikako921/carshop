@@ -1,14 +1,10 @@
-/* 下部広告部分 */
-/* items/index.htmlの広告cssを所々使いまわしています。 */
 
-
-/* //下部広告部分 */
 
 .footer {
   width: 100vw;
   padding: 5vh 0;
   color: #FFF;
-  background-color: #0b327f;
+  background-color:#050A2E;
   text-align: center;
 }
 

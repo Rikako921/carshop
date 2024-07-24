@@ -4,6 +4,18 @@
 
   <%# 画面上部の「IMPROVE」帯部分 %>
   <div class='title-contents'>
+      <div class='search-bar-contents'>
+        <%# <%= link_to image_tag("carshop-icon.png", class:"carshop-icon"), "/" %>     
+         <div class="site-title">
+           <%= link_to '(株)improve', "#", class: "carshop-title" %></li>
+      </div>
+    <form class="search-form" action="#">
+      <input class='input-box' placeholder='キーワードから探す'>
+      <button class="search-button">
+        <%= image_tag "search.png", class:"search-icon" %>
+      </button>
+    </form>
+  </div>
     <h2 class='service-title'>
       販売・買取も対応
     </h2>

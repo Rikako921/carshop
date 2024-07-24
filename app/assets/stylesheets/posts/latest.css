@@ -5,7 +5,7 @@
   margin-top: 40px;
 }
 .car-item {
-  border: 1px solid #ddd;
+  border: 1px solid #050A2E;
   padding: 10px;
   width: calc(33.333% - 20px); /* 3列にするために幅を設定 */
   box-sizing: border-box;
@@ -14,4 +14,10 @@
 .pagination {
   margin-top: 20px;
   text-align: center;
+}
+/* スライド画像のスタイル */
+.latest-image {
+  width: 100%;
+  height: 65%; /* 画像の高さを調整 */
+  object-fit: contain;
 }

@@ -1,24 +1,49 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## posts テーブル
 
-Things you may want to cover:
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| price_total        | string | null: false |
+| year               | string | null: false, unique: true |
+|distance            | string | null: false |
+| inspection         | string | null: false |
+| color              | string | null: false |
+| car_name           | string | null: false |
+| car_model          | string | null: false |
+| rec_point          | text   | null: false |
+| grade              | text   | null: false |
+| user               | references| null: false |
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+### Association
 
-* Database initialization
+-   belongs_to :user
 
-* How to run the test suite
+## users テーブル
 
-* Services (job queues, cache servers, search engines, etc.)
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false |
+| id_number          | string | null: false |
+| name               | string | null: false |
 
-* Deployment instructions
 
-* ...
+### Association
+
+- has_many :posts
+
+##  contactsテーブル
+
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| name   | string     | null: false                    |
+| email  | string     | null: false                    |
+| phone_number| string | null: false                 |
+| message| text       | null: false                    |
+
+
+### Association
